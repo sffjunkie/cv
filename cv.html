@@ -12,21 +12,22 @@
         :root {
             /* blue h=210, red h=342 */
             --color-angle: 210;
+            --color-saturation: 40%;
 
-            --accent-color: hsl(var(--color-angle), 40%, 25%);
-            --accent-color-light: hsl(var(--color-angle), 50%, 50%);
+            --accent-color: hsl(var(--color-angle), var(--color-saturation), 25%);
+            --accent-color-light: hsl(var(--color-angle), var(--color-saturation), 50%);
 
             --container-border-radius: 1em;
             --hero-border-radius: 50%;
 
             --summary-color: #fdfdfd;
-            --summary-bg-color: hsl(var(--color-angle) 40% 25%);
+            --summary-bg-color: hsl(var(--color-angle) var(--color-saturation) 25%);
             --summary-padding: 2rem;
 
             --details-color: #161c27;
             --details-bg-color: #fafafa;
 
-            --target-color: hsl(var(--color-angle) 80% 50% / 0.5)
+            --target-color: hsl(var(--color-angle) var(--color-saturation) 50% / 0.5)
         }
 
         body {
@@ -77,7 +78,7 @@
         }
 
         a[rel~="external"] {
-            padding-inline-end: 30px;
+            padding-inline-end: 25px;
             background-repeat: no-repeat;
             background-position: right 5px center;
             background-size: 0.66rem;
@@ -174,6 +175,7 @@
             border-block-end: 2px solid #686767;
             padding-block-end: 0.1rem;
             color: var(--accent-color-light);
+            /* text-transform: uppercase; */
         }
 
         #summary ul {
@@ -275,7 +277,7 @@
             padding-inline-start: var(--summary-padding);
             background-repeat: no-repeat;
             background-position: center left;
-            background-size: 1.5rem;
+            background-size: 1.4rem;
         }
 
         .icon.small {
